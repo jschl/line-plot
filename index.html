@@ -8,7 +8,7 @@
       .line {
         fill: none;
         stroke: #4e3eb2;
-        stroke-width: 2px;
+        stroke-width: 7px;
       }
 
       div {
@@ -27,7 +27,7 @@
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script>
 
-      var margin = {top: 50, right: 50, bottom: 50, left: 50}
+      var margin = {top: 150, right: 150, bottom: 150, left: 150}
         , width = window.innerWidth - margin.left - margin.right
         , height = window.innerHeight - 130 - margin.top - margin.bottom;
 
@@ -62,10 +62,12 @@
             .attr("d", valueline);
 
         svg.append("g")
+            .style("font", "16px times")
             .attr("transform", "translate(0," + height + ")")
             .call(d3.axisBottom(x));
 
         svg.append("g")
+            .style("font", "16px times")
             .call(d3.axisLeft(y));
 
       });
